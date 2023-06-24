@@ -23,3 +23,8 @@ Let's play and unleash your math skills!
 <br>
 
 [![asciicast](https://asciinema.org/a/0srWS0fa9UNRw7PDSSFyN0CdK.svg)](https://asciinema.org/a/0srWS0fa9UNRw7PDSSFyN0CdK)
+
+<h2 id="brain-gcd">Game: "Divisor Delight"</h2>
+Welcome to the "Divisor Delight" game! Get ready for some number crunching fun. Here's how it works: I'll show you two random numbers, like 25 and 50. Your mission, should you choose to accept it, is to find and enter the grandest, most splendid common divisor of these numbers. Can you handle the challenge? Let's find out!
+
+[![asciicast](https://asciinema.org/a/pn1mGncTZI1EhdcGs6StvFZ3n.svg)](https://asciinema.org/a/pn1mGncTZI1EhdcGs6StvFZ3n)

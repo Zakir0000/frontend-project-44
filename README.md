@@ -28,3 +28,14 @@ Let's play and unleash your math skills!
 Welcome to the "Divisor Delight" game! Get ready for some number crunching fun. Here's how it works: I'll show you two random numbers, like 25 and 50. Your mission, should you choose to accept it, is to find and enter the grandest, most splendid common divisor of these numbers. Can you handle the challenge? Let's find out!
 
 [![asciicast](https://asciinema.org/a/pn1mGncTZI1EhdcGs6StvFZ3n.svg)](https://asciinema.org/a/pn1mGncTZI1EhdcGs6StvFZ3n)
+
+<h2 id="brain-progression">Game: "Brain-progression"</h2>
+Welcome to the game "Arithmetic Progression" - a game with the amazing ability to hide numbers with two dots! Are you ready to unravel the mystery behind this sequence of numbers?
+
+In this game, you will be shown a series of numbers that form an arithmetic progression, but one of the numbers will be hidden using two dots. Your task is to uncover this hidden number and determine what number is hiding behind those dots.
+
+We have prepared a series of numbers for you, and it will change each time to keep you on your toes. But don't worry, you can do it!
+
+Are you ready for this exciting challenge? Let's start the game "Arithmetic Progression" and reveal the secret behind this mysterious progression!
+
+[![asciicast](https://asciinema.org/a/jlA9lDxQAfiEfHkvzR6Ej0xQ5.svg)](https://asciinema.org/a/jlA9lDxQAfiEfHkvzR6Ej0xQ5)

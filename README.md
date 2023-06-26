@@ -27,7 +27,7 @@ Let's play and unleash your math skills!
 <h2 id="brain-gcd">Game: "Divisor Delight"</h2>
 Welcome to the "Divisor Delight" game! Get ready for some number crunching fun. Here's how it works: I'll show you two random numbers, like 25 and 50. Your mission, should you choose to accept it, is to find and enter the grandest, most splendid common divisor of these numbers. Can you handle the challenge? Let's find out!
 
-[![asciicast](https://asciinema.org/a/pn1mGncTZI1EhdcGs6StvFZ3n.svg)](https://asciinema.org/a/pn1mGncTZI1EhdcGs6StvFZ3n)
+[![asciicast](https://asciinema.org/a/HdcntA7lIIQPc4I7DiydVEQIg.svg)](https://asciinema.org/a/HdcntA7lIIQPc4I7DiydVEQIg)
 
 <h2 id="brain-progression">Game: "Brain-progression"</h2>
 Welcome to the game "Arithmetic Progression" - a game with the amazing ability to hide numbers with two dots! Are you ready to unravel the mystery behind this sequence of numbers?

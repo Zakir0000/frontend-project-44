@@ -39,3 +39,21 @@ We have prepared a series of numbers for you, and it will change each time to ke
 Are you ready for this exciting challenge? Let's start the game "Arithmetic Progression" and reveal the secret behind this mysterious progression!
 
 [![asciicast](https://asciinema.org/a/jlA9lDxQAfiEfHkvzR6Ej0xQ5.svg)](https://asciinema.org/a/jlA9lDxQAfiEfHkvzR6Ej0xQ5)
+
+<h2 id="brain-prime">Game: "Is It Prime?"</h2>
+
+Welcome to the mind-bending world of prime numbers!
+Prepare to unlock the secrets of the numerical universe.
+
+Here's how it works:
+I will present you with a number, and your mission, should you choose to accept it, is to determine if that number is prime or not.
+
+To claim victory, answer with a resounding "yes" if the number is indeed prime. But beware! If the number is not prime, you must respond with a confident "no".
+
+Remember, prime numbers are like hidden gems of the numerical realm, possessing only two divisors: 1 and themselves. They stand out from the crowd, elusive and unique.
+
+So, are you ready to explore the mysterious world of primes and showcase your mathematical prowess?
+
+Let the quest begin!
+
+[![asciicast](https://asciinema.org/a/3zJ4r5O32K5445czHrWxUltaa.svg)](https://asciinema.org/a/3zJ4r5O32K5445czHrWxUltaa)

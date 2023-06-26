@@ -10,7 +10,7 @@ The game continues until you give the wrong answer or until you correctly answer
 
 Your goal is to achieve a streak of three consecutive correct answers to win the game.
 
-[![asciicast](https://asciinema.org/a/tM8kBw9yekKYMecCzEfUVnJ94.svg)](https://asciinema.org/a/tM8kBw9yekKYMecCzEfUVnJ94)
+[![asciicast](https://asciinema.org/a/oJImpRVPWpSrR5jScu4esrZRi.svg)](https://asciinema.org/a/oJImpRVPWpSrR5jScu4esrZRi)
 
 <h2 id="brain-calc">Game: "Calculator"</h2>
 Solve math expressions and become a math wizard!

@@ -26,19 +26,17 @@ const hideRandomNumber = (progression) => {
 const getProgressionQuestion = (progression) => progression.join(' ');
 
 const getProgressionAnswer = (progression, hiddenIndex) => {
-  const diff = progression[1] - progression[0];
-  let correctAnswer;
-
-  if (hiddenIndex === 0) {
-    correctAnswer = progression[1] - diff;
-  } else {
-    correctAnswer = progression[hiddenIndex - 1] + diff;
-  }
-
-  if (progression[hiddenIndex] === '..') {
+  const hiddenValue = progression[hiddenIndex];
+  if (hiddenValue === '..') {
+    const prevValue = progression[hiddenIndex - 1];
+    const nextValue = progression[hiddenIndex + 1];
+    const correctAnswer = prevValue + ((nextValue - prevValue) / 2);
     return String(correctAnswer);
+
+  // eslint-disable-next-line no-else-return
+  } else {
+    return hiddenValue;
   }
-  return String(progression[hiddenIndex]);
 };
 
 const playProgressionGame = () => {

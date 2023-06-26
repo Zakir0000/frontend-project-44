@@ -47,8 +47,6 @@ const getProgressionAnswer = (progression, hiddenIndex) => {
 };
 
 const playProgressionGame = () => {
-  const name = greetUser();
-
   const gameTerms = 'What number is missing in the progression?';
 
   const getQuestion = () => {
@@ -63,7 +61,7 @@ const playProgressionGame = () => {
     return getProgressionAnswer(progression, hiddenIndex);
   };
 
-  playGame(gameTerms, getQuestion, getCorrectAnswer, name);
+  playGame(gameTerms, getQuestion, getCorrectAnswer);
 };
 
 playProgressionGame();

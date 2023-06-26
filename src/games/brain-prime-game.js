@@ -1,6 +1,6 @@
 import { greetUser, playGame, generateRandomNumber } from '../index.js';
 
-const gameTerms = 'Answer "yes" if number is prime. Otherwise answer "no".';
+const gameTerms = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const getQuestion = () => generateRandomNumber();
 const getCorrectAnswer = (number) => {
   if (number < 2) {

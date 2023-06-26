@@ -38,7 +38,7 @@ We have prepared a series of numbers for you, and it will change each time to ke
 
 Are you ready for this exciting challenge? Let's start the game "Arithmetic Progression" and reveal the secret behind this mysterious progression!
 
-[![asciicast](https://asciinema.org/a/jlA9lDxQAfiEfHkvzR6Ej0xQ5.svg)](https://asciinema.org/a/jlA9lDxQAfiEfHkvzR6Ej0xQ5)
+[![asciicast](https://asciinema.org/a/F0ikGTQkvu8SHDP7loaJFRAaf.svg)](https://asciinema.org/a/F0ikGTQkvu8SHDP7loaJFRAaf)
 
 <h2 id="brain-prime">Game: "Is It Prime?"</h2>
 

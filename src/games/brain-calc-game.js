@@ -1,4 +1,4 @@
-import { playGame, greetUser, generateRandomNumber } from '../index.js';
+import { playGame, generateRandomNumber } from '../index.js';
 
 const generateRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -29,5 +29,4 @@ const getCorrectAnswer = (question) => {
   }
 };
 
-const name = greetUser();
-playGame(gameTerms, getQuestion, getCorrectAnswer, name);
+playGame(gameTerms, getQuestion, getCorrectAnswer);

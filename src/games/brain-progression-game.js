@@ -1,4 +1,4 @@
-import { greetUser, playGame, generateRandomNumber } from '../index.js';
+import { playGame, generateRandomNumber } from '../index.js';
 
 const generateArithmeticProgression = (length) => {
   const start = generateRandomNumber();

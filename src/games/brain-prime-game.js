@@ -1,4 +1,4 @@
-import { greetUser, playGame, generateRandomNumber } from '../index.js';
+import { playGame, generateRandomNumber } from '../index.js';
 
 const gameTerms = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const getQuestion = () => generateRandomNumber();
@@ -18,5 +18,4 @@ const getCorrectAnswer = (number) => {
   return 'yes';
 };
 
-const name = greetUser();
-playGame(gameTerms, getQuestion, getCorrectAnswer, name);
+playGame(gameTerms, getQuestion, getCorrectAnswer);

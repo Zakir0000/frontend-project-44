@@ -29,10 +29,20 @@ const getProgressionAnswer = (progression, hiddenIndex) => {
   const hiddenValue = progression[hiddenIndex];
   if (hiddenValue === '..') {
     const prevValue = progression[hiddenIndex - 1];
+    const prevToPrevValue = progression[hiddenIndex - 2];
     const nextValue = progression[hiddenIndex + 1];
-    const correctAnswer = prevValue + ((nextValue - prevValue) / 2);
-    return String(correctAnswer);
-
+    const nextToNextValue = progression[hiddenIndex + 2];
+    if (prevValue) {
+      const correctAnswer = prevValue + ((nextValue - prevValue) / 2);
+      return String(correctAnswer);
+    // eslint-disable-next-line no-else-return
+    } else if (prevValue === true && nextValue !== true) {
+      const correctAnswer = (prevValue - prevToPrevValue) + prevValue;
+      return String(correctAnswer);
+    } else if (prevValue !== true) {
+      const correctAnswer = nextValue - (nextToNextValue - nextValue);
+      return String(correctAnswer);
+    }
   // eslint-disable-next-line no-else-return
   } else {
     return hiddenValue;

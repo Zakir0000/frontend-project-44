@@ -1,6 +1,6 @@
 import { playGame, generateRandomNumber, greetUser } from '../index.js';
 
-const gameTerms = 'Find ghe greatest common divisor of given numbers.';
+const gameTerms = 'Find the greatest common divisor of given numbers.';
 
 const getQuestion = () => {
   const num1 = generateRandomNumber();

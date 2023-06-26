@@ -33,18 +33,15 @@ const getProgressionAnswer = (progression, hiddenIndex) => {
     const prevToPrevValue = progression[hiddenIndex - 2];
     const nextValue = progression[hiddenIndex + 1];
     const nextToNextValue = progression[hiddenIndex + 2];
-    if (nextValue !== true) {
+    if (!nextValue) {
       correctAnswer = (prevValue - prevToPrevValue) + prevValue;
     // eslint-disable-next-line no-else-return
-    } else if (prevValue) {
+    } else if (!prevValue) {
+      correctAnswer = nextValue - (nextToNextValue - nextValue);
+    } else if (prevValue && nextValue) {
       correctAnswer = prevValue + ((nextValue - prevValue) / 2);
     // eslint-disable-next-line no-else-return
-    } else if (prevValue !== true) {
-      correctAnswer = nextValue - (nextToNextValue - nextValue);
     }
-  // eslint-disable-next-line no-else-return
-  } else {
-    return hiddenValue;
   }
   return String(correctAnswer);
 };

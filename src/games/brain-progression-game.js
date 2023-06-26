@@ -38,7 +38,7 @@ const getProgressionAnswer = (progression, hiddenIndex) => {
   if (progression[hiddenIndex] === '..') {
     return String(correctAnswer);
   }
-  return '..';
+  return String(progression[hiddenIndex]);
 };
 
 const playProgressionGame = () => {

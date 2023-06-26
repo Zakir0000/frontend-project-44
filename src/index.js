@@ -28,4 +28,7 @@ export const playGame = (gameTerms, getQuestion, getCorrectAnswer, name) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export const generateRandomNumber = (min = 0, max = 10) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const generateRandomNumber = (min = 0, max = 10) => {
+  const result = Math.floor(Math.random() * (max - min + 1)) + min;
+  return result;
+};

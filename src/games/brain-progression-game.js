@@ -27,27 +27,26 @@ const getProgressionQuestion = (progression) => progression.join(' ');
 
 const getProgressionAnswer = (progression, hiddenIndex) => {
   const hiddenValue = progression[hiddenIndex];
+  let correctAnswer = 0;
   if (hiddenValue === '..') {
     const prevValue = progression[hiddenIndex - 1];
     const prevToPrevValue = progression[hiddenIndex - 2];
     const nextValue = progression[hiddenIndex + 1];
     const nextToNextValue = progression[hiddenIndex + 2];
     if (nextValue !== true) {
-      const correctAnswer = (prevValue - prevToPrevValue) + prevValue;
-      return String(correctAnswer);
+      correctAnswer = (prevValue - prevToPrevValue) + prevValue;
     // eslint-disable-next-line no-else-return
     } else if (prevValue) {
-      const correctAnswer = prevValue + ((nextValue - prevValue) / 2);
-      return String(correctAnswer);
+      correctAnswer = prevValue + ((nextValue - prevValue) / 2);
     // eslint-disable-next-line no-else-return
     } else if (prevValue !== true) {
-      const correctAnswer = nextValue - (nextToNextValue - nextValue);
-      return String(correctAnswer);
+      correctAnswer = nextValue - (nextToNextValue - nextValue);
     }
   // eslint-disable-next-line no-else-return
   } else {
     return hiddenValue;
   }
+  return String(correctAnswer);
 };
 
 const playProgressionGame = () => {

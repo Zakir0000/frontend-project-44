@@ -1,8 +1,17 @@
 import { playGame } from '../index.js';
 import { generateRandomNumber } from '../generate-random-num.js';
 
-const gameTerms = 'Answer "yes" if the number is even, otherwise answer "no".';
-const getQuestion = () => generateRandomNumber();
-const getCorrectAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
+export default () => {
+  const gameTerms = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const getQuestion = () => {
+    const question = generateRandomNumber();
+    return question;
+  };
 
-playGame(gameTerms, getQuestion, getCorrectAnswer);
+  const getCorrectAnswer = (number) => {
+    const answer = number % 2 === 0 ? 'yes' : 'no';
+    return answer;
+  };
+
+  playGame(gameTerms, getQuestion, getCorrectAnswer);
+};

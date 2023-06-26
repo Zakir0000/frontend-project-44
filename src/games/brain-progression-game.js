@@ -35,7 +35,10 @@ const getProgressionAnswer = (progression, hiddenIndex) => {
     correctAnswer = progression[hiddenIndex - 1] + diff;
   }
 
-  return String(correctAnswer);
+  if (progression[hiddenIndex] === '..') {
+    return String(correctAnswer);
+  }
+  return '..';
 };
 
 const playProgressionGame = () => {

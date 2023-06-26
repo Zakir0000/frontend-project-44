@@ -1,4 +1,5 @@
-import { playGame, generateRandomNumber } from '../index.js';
+import { playGame } from '../index.js';
+import { generateRandomNumber } from '../generate-random-num.js';
 
 const gameTerms = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getQuestion = () => generateRandomNumber();

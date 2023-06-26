@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 
+// eslint-disable-next-line import/prefer-default-export
 export const playGame = (gameTerms, getQuestion, getCorrectAnswer) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -23,9 +24,4 @@ export const playGame = (gameTerms, getQuestion, getCorrectAnswer) => {
   }
 
   console.log(`Congratulations, ${userName}!`);
-};
-
-export const generateRandomNumber = (min = 0, max = 10) => {
-  const result = Math.floor(Math.random() * (max - min + 1)) + min;
-  return result;
 };

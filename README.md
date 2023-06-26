@@ -56,4 +56,4 @@ So, are you ready to explore the mysterious world of primes and showcase your ma
 
 Let the quest begin!
 
-[![asciicast](https://asciinema.org/a/3zJ4r5O32K5445czHrWxUltaa.svg)](https://asciinema.org/a/3zJ4r5O32K5445czHrWxUltaa)
+[![asciicast](https://asciinema.org/a/0rtRFO3xX6RFx227yVic7memR.svg)](https://asciinema.org/a/0rtRFO3xX6RFx227yVic7memR)

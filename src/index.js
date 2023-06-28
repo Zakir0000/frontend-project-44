@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
 
-// eslint-disable-next-line import/prefer-default-export
-export const playGame = (gameTerms, getQuestion, getCorrectAnswer) => {
+const playGame = (gameTerms, getQuestion, getCorrectAnswer) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -25,3 +24,5 @@ export const playGame = (gameTerms, getQuestion, getCorrectAnswer) => {
 
   console.log(`Congratulations, ${userName}!`);
 };
+
+export default playGame;

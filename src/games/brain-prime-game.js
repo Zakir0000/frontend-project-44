@@ -1,4 +1,4 @@
-import { playGame } from '../index.js';
+import playGame from '../index.js';
 import { generateRandomNumber } from '../generate-random-num.js';
 
 export default () => {

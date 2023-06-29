@@ -10,25 +10,31 @@ export default () => {
 
   const gameTerms = 'What is the result of the expression?';
 
-  const getQuestion = () => {
+  const playGameStructure = () => {
     const num1 = generateRandomNumber();
     const num2 = generateRandomNumber();
     const operator = generateRandomOperator();
-    return `${num1} ${operator} ${num2}`;
+    const question = `${num1} ${operator} ${num2}`;
+    const correctAnswer = () => {
+      let result;
+
+      switch (operator) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        default:
+          return '';
+      }
+      return String(result);
+    };
+    return [question, correctAnswer()];
   };
 
-  const getCorrectAnswer = (question) => {
-    const [num1, operator, num2] = question.split(' ');
-    switch (operator) {
-      case '+':
-        return String(Number(num1) + Number(num2));
-      case '-':
-        return String(Number(num1) - Number(num2));
-      case '*':
-        return String(Number(num1) * Number(num2));
-      default:
-        return '';
-    }
-  };
-  playGame(gameTerms, getQuestion, getCorrectAnswer);
+  playGame(gameTerms, playGameStructure);
 };

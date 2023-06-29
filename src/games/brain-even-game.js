@@ -2,16 +2,15 @@ import playGame from '../index.js';
 import { generateRandomNumber } from '../generate-random-num.js';
 
 export default () => {
-  const gameTerms = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const getQuestion = () => {
+  const isEven = (number) => number % 2 === 0;
+
+  const playGameStructure = () => {
     const question = generateRandomNumber();
-    return question;
+    const correctAnswer = isEven(question) ? 'yes' : 'no';
+    return [question, correctAnswer];
   };
 
-  const getCorrectAnswer = (number) => {
-    const answer = number % 2 === 0 ? 'yes' : 'no';
-    return answer;
-  };
+  const gameTerms = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  playGame(gameTerms, getQuestion, getCorrectAnswer);
+  playGame(gameTerms, playGameStructure);
 };

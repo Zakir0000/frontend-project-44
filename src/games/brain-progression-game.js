@@ -3,7 +3,7 @@ import { generateRandomNumber } from '../generate-random-num.js';
 
 export default () => {
   const generateArithmeticProgression = (length) => {
-    const start = generateRandomNumber();
+    const start = generateRandomNumber(1, 10);
     const diff = generateRandomNumber(1, 10);
     const progression = [];
 
@@ -48,22 +48,25 @@ export default () => {
     return String(correctAnswer);
   };
 
-  const playProgressionGame = () => {
-    const gameTerms = 'What number is missing in the progression?';
+  const gameTerms = 'What number is missing in the progression?';
 
+  const playGameStructure = () => {
     const getQuestion = () => {
       const progression = generateArithmeticProgression(10);
       const { progression: progressionWithHidden } = hideRandomNumber(progression);
       return getProgressionQuestion(progressionWithHidden);
     };
+    const question = getQuestion();
 
-    const getCorrectAnswer = (question) => {
+    // eslint-disable-next-line no-shadow
+    const correctAnswer = (question) => {
       const progression = question.split(' ').map((item) => (item === '..' ? '..' : parseInt(item, 10)));
       const hiddenIndex = progression.indexOf('..');
       return getProgressionAnswer(progression, hiddenIndex);
     };
 
-    playGame(gameTerms, getQuestion, getCorrectAnswer);
+    return [question, correctAnswer(question)];
   };
-  playProgressionGame();
+
+  playGame(gameTerms, playGameStructure);
 };

@@ -1,9 +1,9 @@
 import playGame from '../index.js';
-import { generateRandomNumber } from '../generate-random-num.js';
+import generateRandomNumber from '../generate-random-num.js';
+
+const gameTerms = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export default () => {
-  const gameTerms = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
   const playGameStructure = () => {
     const question = generateRandomNumber();
     const correctAnswer = (number) => {

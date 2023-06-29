@@ -1,5 +1,7 @@
 import playGame from '../index.js';
-import { generateRandomNumber } from '../generate-random-num.js';
+import generateRandomNumber from '../generate-random-num.js';
+
+const gameTerms = 'What is the result of the expression?';
 
 export default () => {
   const generateRandomOperator = () => {
@@ -7,8 +9,6 @@ export default () => {
     const randomIndex = generateRandomNumber(0, operators.length - 1);
     return operators[randomIndex];
   };
-
-  const gameTerms = 'What is the result of the expression?';
 
   const playGameStructure = () => {
     const num1 = generateRandomNumber();

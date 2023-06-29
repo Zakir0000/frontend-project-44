@@ -1,71 +1,52 @@
 import playGame from '../index.js';
-import { generateRandomNumber } from '../generate-random-num.js';
+import generateRandomNumber from '../generate-random-num.js';
+
+const gameTerms = 'What number is missing in the progression?';
 
 export default () => {
-  const generateArithmeticProgression = (length) => {
-    const start = generateRandomNumber(1, 10);
-    const diff = generateRandomNumber(1, 10);
+  const generateArithmeticProgression = (start, step, hiddenIndex) => {
     const progression = [];
+    let correctAnswer = '';
 
-    for (let i = 0; i < length; i += 1) {
-      progression.push(start + i * diff);
-    }
+    for (let i = 0; i < 10; i += 1) {
+      const value = start + i * step;
+      progression.push(value);
 
-    return progression;
-  };
+      if (i === hiddenIndex) {
+        const prevValue = progression[i - 1];
+        const prevToPrevValue = progression[i - 2];
+        const nextValue = progression[i + 1];
+        const nextToNextValue = progression[i + 2];
 
-  const hideRandomNumber = (progression) => {
-    const hiddenIndex = generateRandomNumber(0, progression.length - 1);
-    const hiddenValue = progression[hiddenIndex];
-    // eslint-disable-next-line no-param-reassign
-    progression[hiddenIndex] = '..';
-    return {
-      hiddenValue,
-      progression,
-    };
-  };
-
-  const getProgressionQuestion = (progression) => progression.join(' ');
-
-  const getProgressionAnswer = (progression, hiddenIndex) => {
-    const hiddenValue = progression[hiddenIndex];
-    let correctAnswer = 0;
-    if (hiddenValue === '..') {
-      const prevValue = progression[hiddenIndex - 1];
-      const prevToPrevValue = progression[hiddenIndex - 2];
-      const nextValue = progression[hiddenIndex + 1];
-      const nextToNextValue = progression[hiddenIndex + 2];
-      if (!nextValue) {
-        correctAnswer = (prevValue - prevToPrevValue) + prevValue;
-      // eslint-disable-next-line no-else-return
-      } else if (!prevValue) {
-        correctAnswer = nextValue - (nextToNextValue - nextValue);
-      } else if (prevValue && nextValue) {
-        correctAnswer = prevValue + ((nextValue - prevValue) / 2);
-      // eslint-disable-next-line no-else-return
+        if (!nextValue) {
+          correctAnswer = String((prevValue - prevToPrevValue) + prevValue);
+        } else if (!prevValue) {
+          correctAnswer = String(nextValue - (nextToNextValue - nextValue));
+        } else if (prevValue && nextValue) {
+          correctAnswer = String(prevValue + ((nextValue - prevValue) / 2));
+        }
       }
     }
-    return String(correctAnswer);
+
+    progression[hiddenIndex] = '..';
+
+    return {
+      hiddenValue: progression[hiddenIndex],
+      progression: progression.join(' '),
+      correctAnswer,
+    };
   };
 
-  const gameTerms = 'What number is missing in the progression?';
-
   const playGameStructure = () => {
-    const getQuestion = () => {
-      const progression = generateArithmeticProgression(10);
-      const { progression: progressionWithHidden } = hideRandomNumber(progression);
-      return getProgressionQuestion(progressionWithHidden);
-    };
-    const question = getQuestion();
+    const start = generateRandomNumber(1, 10);
+    const step = generateRandomNumber(1, 10);
+    const hiddenIndex = generateRandomNumber(0, 9);
 
-    // eslint-disable-next-line no-shadow
-    const correctAnswer = (question) => {
-      const progression = question.split(' ').map((item) => (item === '..' ? '..' : parseInt(item, 10)));
-      const hiddenIndex = progression.indexOf('..');
-      return getProgressionAnswer(progression, hiddenIndex);
-    };
+    const question = generateArithmeticProgression(start, step, hiddenIndex);
 
-    return [question, correctAnswer(question)];
+    const { correctAnswer } = question;
+
+    return [question.progression, correctAnswer];
   };
 
   playGame(gameTerms, playGameStructure);

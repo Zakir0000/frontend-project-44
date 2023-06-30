@@ -3,38 +3,33 @@ import generateRandomNumber from '../generate-random-num.js';
 
 const gameTerms = 'What is the result of the expression?';
 
+const playGameStructure = () => {
+  const num1 = generateRandomNumber();
+  const num2 = generateRandomNumber();
+  const operators = ['+', '-', '*'];
+  const randomIndex = generateRandomNumber(0, operators.length - 1);
+  const operator = operators[randomIndex];
+  const question = `${num1} ${operator} ${num2}`;
+  let result;
+
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    default:
+      break;
+  }
+
+  const correctAnswer = String(result);
+  return [question, correctAnswer];
+};
+
 export default () => {
-  const generateRandomOperator = () => {
-    const operators = ['+', '-', '*'];
-    const randomIndex = generateRandomNumber(0, operators.length - 1);
-    return operators[randomIndex];
-  };
-
-  const playGameStructure = () => {
-    const num1 = generateRandomNumber();
-    const num2 = generateRandomNumber();
-    const operator = generateRandomOperator();
-    const question = `${num1} ${operator} ${num2}`;
-    const correctAnswer = () => {
-      let result;
-
-      switch (operator) {
-        case '+':
-          result = num1 + num2;
-          break;
-        case '-':
-          result = num1 - num2;
-          break;
-        case '*':
-          result = num1 * num2;
-          break;
-        default:
-          return '';
-      }
-      return String(result);
-    };
-    return [question, correctAnswer()];
-  };
-
   playGame(gameTerms, playGameStructure);
 };

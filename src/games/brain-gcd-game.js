@@ -16,8 +16,8 @@ export default () => {
     const num2 = generateRandomNumber();
     const question = `${num1} ${num2}`;
 
-    const correctAnswer = () => String(calculateGcd(num1, num2));
-    return [question, correctAnswer()];
+    const correctAnswer = String(calculateGcd(num1, num2));
+    return [question, correctAnswer];
   };
 
   playGame(gameTerms, playGameStructure);

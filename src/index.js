@@ -6,7 +6,9 @@ const playGame = (gameTerms, playGameStructure) => {
   console.log(`Hello, ${userName}!`);
   console.log(`${gameTerms}`);
 
-  for (let round = 1; round <= 3; round += 1) {
+  const gameRounds = 3;
+
+  for (let round = 1; round <= gameRounds; round += 1) {
     const [question, correctAnswer] = playGameStructure();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');

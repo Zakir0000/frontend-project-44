@@ -3,27 +3,27 @@ import generateRandomNumber from '../generate-random-num.js';
 
 const gameTerms = 'What number is missing in the progression?';
 
-const playGameStructure = () => {
-  const start = 5;
-  const step = 2;
-  const length = generateRandomNumber(5, 10);
-  const hiddenIndex = generateRandomNumber(0, length - 1);
-
+const generateProgression = (start, step, length, hiddenIndex) => {
   let question = '';
   let correctAnswer = '';
 
   for (let i = 0; i < length; i += 1) {
     const value = start + i * step;
 
-    if (i === hiddenIndex) {
-      question += '.. ';
-      correctAnswer = String(value);
-    } else {
-      question += `${value} `;
-    }
+    question += i === hiddenIndex ? '.. ' : `${value} `;
+    correctAnswer = i === hiddenIndex ? String(value) : correctAnswer;
   }
 
   return [question.trim(), correctAnswer];
+};
+
+const playGameStructure = () => {
+  const start = 5;
+  const step = 2;
+  const length = generateRandomNumber(5, 10);
+  const hiddenIndex = generateRandomNumber(0, length - 1);
+
+  return generateProgression(start, step, length, hiddenIndex);
 };
 
 export default () => {

@@ -1,5 +1,5 @@
 install:
-	npm install
+	npm cibr
 
 brain-games:
 	node bin/brain-games.js
@@ -15,6 +15,9 @@ brain-gcd:
 
 brain-prime:
 	node bin/brain-prime.js
+
+brain-progression:
+	node bin/brain-progression.js
 
 publish:
 	npm publish --dry-run

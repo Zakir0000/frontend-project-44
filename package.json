@@ -15,7 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Zakri",
+  "author": "Zakir",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10"
